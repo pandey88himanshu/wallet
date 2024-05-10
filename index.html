@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wallet</title>
+    <link rel="stylesheet" href="index.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="icon" type="image/png" href="./favicon/favicon.ico" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="content">
+        <!-- navigation begin  -->
+        <nav class="flex justify-between items-center">
+          <div class="logo flex items-center gap-2.5">
+            <img src="./images/ic_wallet.png" alt="" />
+            <p class="font-bold font-['Archivo']">Wallet</p>
+          </div>
+          <div class="search_bar flex justify-center items-center">
+            <div class="search_item">
+              <input type="text" />
+              <i class="fa-solid fa-magnifying-glass h-[20px] w-[20px]"></i>
+            </div>
+          </div>
+          <div class="profile flex justify-end items-center">
+            <i class="fa-regular fa-bell"></i>
+            <div class="profile_item flex justify-between items-center">
+              <img src="./images/placeholder2.png" alt="" />
+              <div class="profile_name font-['Manrope']">
+                <p class="text-left">John Doe</p>
+                <p class="text-left">Workspace Settings</p>
+              </div>
+            </div>
+          </div>
+        </nav>
+        <!-- navigation ends -->
+        <!-- main content start -->
+        <section class="main_section flex text-white">
+          <!-- aside content start -->
+          <aside class="flex justify-center items-center">
+            <div class="aside_wrapper">
+              <div class="top_icon flex justify-between items-center flex-col">
+                <i class="fa-solid fa-house"></i>
+                <i class="fa-solid fa-chart-simple"></i>
+                <i class="fa-solid fa-phone"></i>
+                <i class="fa-regular fa-comment"></i>
+                <i class="fa-solid fa-wallet" id="active"></i>
+              </div>
+              <div class="bottom_icon flex items-center flex-col">
+                <i class="fa-solid fa-gear"></i>
+                <i class="fa-solid fa-right-from-bracket"></i>
+              </div>
+            </div>
+          </aside>
+          <!-- aside content ends -->
+          <article class="main_content flex flex-col">
+            <section
+              class="top_main flex justify-center items-center flex-col font-['Poppins']"
+            >
+              <div class="top_main_wrapper flex justify-between items-center">
+                <div class="balance flex justify-between items-center">
+                  <div class="balance_img">
+                    <img src="./images/ic_wallet.png" alt="" />
+                  </div>
+                  <div class="balance_text">
+                    <p class="font-medium text-[20px]">Main Balance</p>
+                    <p class="font-semibold text-[36px]">$673,412.66</p>
+                  </div>
+                </div>
+                <div class="valid">
+                  <p class="font-medium text-[14px]">VALID THRU</p>
+                  <p class="font-medium text-[16px]">08/21</p>
+                </div>
+                <div class="card_holder">
+                  <p class="font-medium text-[14px]">CARD HOLDER</p>
+                  <p class="font-medium text-[16px]">John Doe.</p>
+                </div>
+                <div class="card_number">
+                  <p class="font-medium text-[20px]">**** **** **** 1234</p>
+                </div>
+              </div>
+              <div class="top_main_range">
+                <img src="./images/progressBar.png" alt="" />
+              </div>
+            </section>
+            <section class="main_side flex">
+              <div class="bottom_main">
+                <div class="bottom_main_wrapper">
+                  <div
+                    class="payment_history flex justify-between items-center"
+                  >
+                    <div class="payment_title font-['Poppins']">
+                      <p class="font-medium text-[20px]">Payment History</p>
+                      <p class="font-medium text-[12px]">
+                        Lorem ipsum dolor sit amet, consectetur
+                      </p>
+                    </div>
+                    <div class="payment_history_btn">
+                      <div
+                        class="button_container flex justify-evenly items-center"
+                      >
+                        <button>Monthly</button>
+                        <button>Weekly</button>
+                        <button>Today</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="payment_history_details">
+                    <div class="payment_history_details_wrapper flex flex-col">
+                      <div
+                        class="history flex justify-evenly items-center font-['Poppins']"
+                      >
+                        <div class="history_img">
+                          <img src="./images/Group 10000019999.png" alt="" />
+                        </div>
+
+                        <div class="history_name">
+                          <p class="font-semibold text-[16px]">XYZ Store ID</p>
+                          <p class="font-normal text-[14px]">Online Shop</p>
+                        </div>
+                        <div class="history_date">
+                          <p class="font-normal text-[14px]">
+                            June 1, 2020, 08:22 AM
+                          </p>
+                        </div>
+                        <div class="history_balance">
+                          <p class="font-normal text-[14px]">+$5,553</p>
+                        </div>
+                        <div class="history_card">
+                          <p class="font-normal text-[14px]">MasterCard 404</p>
+                        </div>
+                        <div class="history_status">
+                          <button class="font-medium text-[14px]">
+                            Completed
+                          </button>
+                        </div>
+                        <div class="history_details">
+                          <i class="fa-solid fa-caret-right"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="payment_history_details flex flex-col selected">
+                    <div class="payment_history_continer">
+                      <div
+                        class="payment_history_details_wrapper flex flex-col"
+                      >
+                        <div
+                          class="history flex justify-evenly items-center font-['Poppins']"
+                        >
+                          <div class="history_img">
+                            <img src="./images/Group 1000001999.png" alt="" />
+                          </div>
+
+                          <div class="history_name">
+                            <p
+                              class="font-semibold text-[16px]"
+                              id="second_item_name"
+                            >
+                              Andrew Lee
+                            </p>
+                          </div>
+                          <div class="history_date">
+                            <p class="font-normal text-[14px]">
+                              June 1, 2020, 08:22 AM
+                            </p>
+                          </div>
+                          <div class="history_balance">
+                            <p class="font-normal text-[14px]">+$5,553</p>
+                          </div>
+                          <div class="history_card">
+                            <p class="font-normal text-[14px]">
+                              MasterCard 404
+                            </p>
+                          </div>
+                          <div class="history_status">
+                            <button
+                              class="font-medium text-[14px]"
+                              id="cancle_btn"
+                            >
+                              Cancled
+                            </button>
+                          </div>
+                          <div class="history_details">
+                            <i class="fa-solid fa-caret-right drop"></i>
+                          </div>
+                        </div>
+                        <div
+                          class="history_detail flex justify-between items-center box"
+                        >
+                          <div
+                            class="history_detail_wrapper flex justify-between items-center"
+                          >
+                            <div class="payment_id">
+                              <p class="font-normal text-[12px]">ID Payment</p>
+                              <p class="font-medium text-[14px]">#00123521</p>
+                            </div>
+                            <div class="payment_method">
+                              <p class="font-normal text-[12px]">
+                                Payment Method
+                              </p>
+                              <p class="font-medium text-[14px]">
+                                MasterCard 404
+                              </p>
+                            </div>
+                            <div class="invoice_date">
+                              <p class="font-normal text-[12px]">
+                                Invoice Date
+                              </p>
+                              <p class="font-medium text-[14px]">
+                                April 29, 2020
+                              </p>
+                            </div>
+                            <div class="due_date">
+                              <p class="font-normal text-[12px]">Due Date</p>
+                              <p class="font-medium text-[14px]">
+                                June 5, 2020
+                              </p>
+                            </div>
+                            <div class="date_paid">
+                              <p class="font-normal text-[12px]">Date Paid</p>
+                              <p class="font-medium text-[14px]">
+                                June 4, 2020
+                              </p>
+                            </div>
+                            <div
+                              class="history_info flex justify-between items-center"
+                            >
+                              <div
+                                class="history_info_wrapper flex justify-between items-center"
+                              >
+                                <img src="./images/ic_info.png" alt="" />
+                                <p>Lorem ipsum dolor sit amet, consectetur</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="payment_history_details">
+                        <div
+                          class="payment_history_details_wrapper flex flex-col"
+                        >
+                          <div
+                            class="history flex justify-evenly items-center font-['Poppins']"
+                          >
+                            <div class="history_img">
+                              <img
+                                src="./images/Group 10000019999.png"
+                                alt=""
+                              />
+                            </div>
+
+                            <div class="history_name">
+                              <p class="font-semibold text-[16px]">
+                                XYZ Store ID
+                              </p>
+                              <p class="font-normal text-[14px]">Online Shop</p>
+                            </div>
+                            <div class="history_date">
+                              <p class="font-normal text-[14px]">
+                                June 1, 2020, 08:22 AM
+                              </p>
+                            </div>
+                            <div class="history_balance">
+                              <p class="font-normal text-[14px]">+$5,553</p>
+                            </div>
+                            <div class="history_card">
+                              <p class="font-normal text-[14px]">
+                                MasterCard 404
+                              </p>
+                            </div>
+                            <div class="history_status">
+                              <button class="font-medium text-[14px]">
+                                Completed
+                              </button>
+                            </div>
+                            <div class="history_details">
+                              <i class="fa-solid fa-caret-right"></i>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="side_content flex flex-col items-center">
+                <div class="side_top flex flex-col justify-between">
+                  <div class="button_wrapper">
+                    <button class="button font-['Poppins']" id="btn1">
+                      Transfer
+                    </button>
+                    <img src="./images/Group 1000001997.png" alt="" />
+                  </div>
+                  <div class="button_wrapper">
+                    <button class="button font-['Poppins']" id="btn2">
+                      Send Invoices
+                    </button>
+                    <img src="./images/Group 1000001998.png" alt="" />
+                  </div>
+                </div>
+                <div class="side_bottom">
+                  <div class="side_bottom_wrapper font-['Poppins']">
+                    <div class="side_bottom_content">
+                      <div class="side_bottom_heading">
+                        <p class="font-medium text-[20px]">Invoices Sent</p>
+                        <p class="font-normal text-[12px]">
+                          Lorem ipsum dolor sit amet, consectetur
+                        </p>
+                      </div>
+
+                      <div class="side_bottom_history">
+                        <div
+                          class="side_bottom_history_content flex justify-between items-center"
+                        >
+                          <div
+                            class="bottom_items flex justify-between items-center"
+                          >
+                            <div class="bottom_history_img"></div>
+                            <div class="bottom_history_name">
+                              <p class="font-semibold text-[16px]">FSoziety</p>
+                              <p class="font-normal text-[12px]">4h ago</p>
+                            </div>
+                          </div>
+                          <div class="bottom_history_amount">
+                            <p class="font-medium text-[16px]">$45</p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="side_bottom_history">
+                        <div
+                          class="side_bottom_history_content flex justify-between items-center"
+                        >
+                          <div
+                            class="bottom_items flex justify-between items-center"
+                          >
+                            <div class="bottom_history_img"></div>
+                            <div class="bottom_history_name">
+                              <p class="font-semibold text-[16px]">
+                                David Ignis
+                              </p>
+                              <p class="font-normal text-[12px]">7h ago</p>
+                            </div>
+                          </div>
+                          <div class="bottom_history_amount">
+                            <p class="font-medium text-[16px]">$672</p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="side_bottom_history">
+                        <div
+                          class="side_bottom_history_content flex justify-between items-center"
+                        >
+                          <div
+                            class="bottom_items flex justify-between items-center"
+                          >
+                            <div class="bottom_history_img"></div>
+                            <div class="bottom_history_name">
+                              <p class="font-semibold text-[16px]">
+                                Olivia Johan..
+                              </p>
+                              <p class="font-normal text-[12px]">4h ago</p>
+                            </div>
+                          </div>
+                          <div class="bottom_history_amount">
+                            <p class="font-medium text-[16px]">$769</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div><img src="./images/btn_next.png" alt="" /></div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </article>
+        </section>
+        <!-- main content ends -->
+      </div>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>
